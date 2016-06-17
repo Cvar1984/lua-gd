@@ -33,8 +33,13 @@ build = {
     type = "make",
     platforms = {
         unix = {
+            build_variables = {
+              LUA_INCDIR="$(LUA_INCDIR)",
+              LUABIN = "$(LUA)" },
+            install_variables = {
+              INSTALL_PATH="$(LIBDIR)" },
             build_pass = true,
-            install_pass = false,
+            install_pass = true,
             install = { lib = { "gd.so" } },
             copy_directories = { "doc", "demos" }
         }

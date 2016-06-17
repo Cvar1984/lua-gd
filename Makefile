@@ -51,6 +51,7 @@ OUTFILE=gd.so
 
 CFLAGS=-O3 -Wall -fPIC $(OMITFP)
 CFLAGS+=`$(GDLIBCONFIG) --cflags` `pkg-config $(LUAPKG) --cflags`
+CFLAGS+=-I$(LUA_INCDIR)
 CFLAGS+=-DVERSION=\"$(VERSION)\"
 
 GDFEATURES=`$(GDLIBCONFIG) --features |sed -e "s/GD_/-DGD_/g"`
