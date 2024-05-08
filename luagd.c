@@ -1888,7 +1888,8 @@ static int LgdImageStringFT(lua_State *L) {
     else
         im = getImagePtr(L, 1);
 
-    if (gdImageStringFT(im, brect, fg, font, size, ang, x, y, str) == NULL) {
+    const char *error_message = gdImageStringFT(im, brect, fg, font, size, ang, x, y, str);
+    if (error_message == NULL) {
         lua_pushnumber(L, brect[0]);
         lua_pushnumber(L, brect[1]);
         lua_pushnumber(L, brect[2]);
@@ -1901,7 +1902,8 @@ static int LgdImageStringFT(lua_State *L) {
     }
 
     lua_pushnil(L);
-    return 1;
+    lua_pushstring(L, error_message);
+    return 2;
 }
 
 
