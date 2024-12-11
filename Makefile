@@ -29,7 +29,7 @@
 VERSION=2.0.33r3
 
 # Command used to run Lua code
-LUABIN=lua5.1
+LUABIN=lua
 
 # Optimization for the brave of heart ;)
 OMITFP=-fomit-frame-pointer
@@ -41,7 +41,7 @@ OMITFP=-fomit-frame-pointer
 # comment out these lines and uncomment and change the next ones.
 
 # Name of .pc file. "lua5.1" on Debian/Ubuntu
-LUAPKG=lua5.1
+LUAPKG=lua
 OUTFILE=gd.so
 
 CFLAGS=-O3 -Wall -fPIC $(OMITFP)
