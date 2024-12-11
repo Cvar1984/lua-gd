@@ -1,8 +1,9 @@
 package = "LuaGD"
-version = "2.0.33r3-1"
+version = "3.0.0-1"
 
 source = {
-    url = "https://github.com/ittner/lua-gd/archive/lua-gd-2.0.33r3.tar.gz",
+    url = "https://github.com/Cvar1984/lua-gd/archive/refs/tags/v3.0.0.tar.gz",
+    dir = "lua-gd-3.0.0",  -- The directory extracted from the tarball
 }
 
 description = {
@@ -16,7 +17,7 @@ graphics package, but it does include most frequently requested features,
 including both truecolor and palette images, resampling (smooth resizing of
 truecolor images) and so forth. It is particularly useful in Web applications.
 ]],
-    homepage = "http://ittner.github.io/lua-gd/",
+    homepage = "https://github.com/Cvar1984/lua-gd/",
     license = "MIT/X11",
     maintainer = "Alexandre Erwin Ittner"
 }
@@ -43,6 +44,6 @@ build = {
             install = { lib = { "gd.so" } },
             copy_directories = { "doc", "demos" }
         }
-        -- Some way to detect GD features on Windows?
     }
 }
+
